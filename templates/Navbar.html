@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Vertical Navbar</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/jquery.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='myfont/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <div class="col-md-offset-4 col-md-3" style="margin-top:100px">
+            <h3 class="page-header text-primary"><span class="fa fa-align-justify"> Vertical Navbar</span> </h3>
+            <ul class="navbar nav navbar-default">
+                <li><a href="#home" data-toggle="collapse"><span class="fa fa-angle-double-right"></span> Home</a></li>
+                <ul id="home" class="nav collapse">
+                     <li><a href="#"><span class="fa fa-home"></span><div class="col-sm-1"></div> Home Page</a></li>
+                </ul>
+                <li><a href="#service" data-toggle="collapse"><span class="fa fa-angle-double-right"></span> Service</a></li>
+                    <ul id="service" class="nav collapse"><li><a href="#"><span class="fa fa-phone"></span><div class="col-sm-1"></div> Services Page</a></li>
+                </ul>
+                <li><a href="#contact" data-toggle="collapse"><span class="fa fa-angle-double-right"></span> Contact</a></li>
+        <ul id="contact" class="nav collapse">
+            <li><a href="#"><span class="fa fa-address-card"></span><div class="col-sm-1"></div> Contact Page</a></li>
+        </ul>
+        <li><a href="#about" data-toggle="collapse"><span class="fa fa-angle-double-right"></span> About</a></li>
+        <ul id="about" class="nav collapse">
+            <li><a href="#"><span class="fa fa-address-book"></span><div class="col-sm-1"></div> About Page</a></li>
+        </ul>
+        <li><a href="#profile" data-toggle="collapse"><span class="fa fa-angle-double-right"></span> Profile</a></li>
+        <ul id="profile" class="nav collapse">
+            <li><a href="#"><span class="fa fa-user"></span><div class="col-sm-1"></div> Profile Page</a></li>
+        </ul>
+            </ul>
+        </div>
+    </body>
+</html>
+<script src="{{url_for('static',filename='jquery/jquery.min.js')}}"></script>
+<script src="{{url_for('static',filename='jquery/bootstrap.min.js')}}"></script>
+<script>
+    $(document).ready(function(){
+      $("a").click(function(){
+        $(".collapse").collapse("hide");
+      });
+    });
+</script>
+
